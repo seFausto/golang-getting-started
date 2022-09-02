@@ -3,7 +3,20 @@ package main
 import "fmt"
 
 func main() {
-	arr := [3]int{1, 2, 3}
+	type user struct {
+		Id        int
+		FirstName string
+		LastName  string
+	}
 
-	fmt.Println(arr)
+	var u user
+	u.Id = 1
+	u.FirstName = "Arthur"
+	u.LastName = "Dent"
+
+	fmt.Println(u.FirstName)
+
+	u2 := user{Id: 1, FirstName: "Arthur", LastName: "Dent"}
+
+	fmt.Println(u2)
 }
